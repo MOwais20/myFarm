@@ -1,0 +1,60 @@
+*, body {
+    font-family: 'Mitr' !important;
+}
+
+// Custom fonts
+@font-face {
+    font-family: "SVN-SAF";
+    src: local("SVN-SAF"),
+     url(~assets/fonts/SVN-SAF.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "iCiel Stabile";
+    src: local("iCiel Stabile"),
+     url(~assets/fonts/Stabile-Regular.ttf) format("truetype");
+}
+
+.custom-font {
+    font-family: 'Mitr' !important;
+}
+
+.custom-font-2 {
+    font-family: 'SVN-SAF' !important;
+}
+
+.custom-font-3 {
+    font-family: 'iCiel Stabile' !important;
+}
+
+.btn-text-wd {
+    font-family: Mitr;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    // -webkit-text-stroke: 1px #741E00; 
+    text-shadow: -2px -2px 0 #741E00,  
+        2px -2px 0 #741E00,
+        -2px  2px 0 #741E00,
+        2px  2px 0 #741E00;
+
+}
+
+.full-h {
+    height: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    text-shadow: -2px -2px 0 #741E00,  
+        2px -2px 0 #741E00,
+        -2px  2px 0 #741E00,
+        2px  2px 0 #741E00;
+}
