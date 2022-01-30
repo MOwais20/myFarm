@@ -35,7 +35,7 @@
     </div>
 
     <!-- Introduction to My Farm Start  -->
-    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7">
+    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -50,28 +50,29 @@
         </v-col>
       </v-row>
 
-      <div class="partners-woodblock d-flex tw-my-16">
-        <v-col align="center" cols="10" alin-self="center">
+      <div class="d-flex flex-row d-flex tw-my-16">
+        <!-- <v-col cols="6" align="center" alin-self="center"> -->
+        <div class="partners-woodblock">
           <v-img
-            class="tw-my-10"
+            class="tw-my-10 tw-mx-48"
             contain
             src="/img/LogoMyFarm.png"
             width="219px"
             height="134px"
           ></v-img>
-          <p class="tw-font-medium ma-4">
+          <p class="tw-font-medium ma-6">
             is created by a group of professional blockchain and game
             programmers with many years of experience, the office is located in
             singapore.
           </p>
-          <div class="d-flex">
+          <div class="d-flex ma-7">
             <PlayButton class="tw-mx-2 hover-shd" style="width: 24px" />
             <p class="tw-font-medium ma-3" align="start">
               A blockchain-based relaxing game inspired by the way of farming in
               the Asian region.
             </p>
           </div>
-          <div class="d-flex">
+          <div class="d-flex ma-7">
             <PlayButton class="tw-mx-2 hover-shd" style="width: 15%" />
             <p class="tw-font-medium ma-4" align="start">
               At My Farm, players will play the role of a farmer who is happy
@@ -80,30 +81,32 @@
               Metaverse whole that incorporates many unique custom farms.
             </p>
           </div>
-        </v-col>
-        <v-col class="d-flex">
+        </div>
+        <!-- </v-col> -->
+        <!-- <v-col cols="6" class="d-flex"> -->
+        <div class="d-flex">
           <v-img
             contain
             src="/img/whitePaper/GameUi.png"
             max-width="700px"
-            height="606px"
-            style="position: absolute"
+            max-height="552px"
+            style="position: absolute; left: 47%; margin-top: 120px"
           >
           </v-img>
           <v-img
             contain
             src="/img/tractor.png"
-            width="331px"
-            height="283px"
-            style="top: 36%; left: 141%"
+            max-width="331px"
+            max-height="283px"
+            style="left: 402px; margin-top: 259px"
           ></v-img>
-        </v-col>
+        </div>
       </div>
     </div>
     <!-- Introduction to My Farm End -->
 
     <!-- LandScape of Opportunity Start  -->
-    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7">
+    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -119,7 +122,7 @@
       </v-row>
 
       <v-row class="d-flex tw-py-7">
-        <v-col cols="6" align="center">
+        <v-col class="d-flex justify-center" cols="6" align="center">
           <v-img
             contain
             src="/img/whitePaper/board.png"
@@ -200,7 +203,7 @@
     <!-- LandScape of Opportunity End  -->
 
     <!-- Value Proposition Start  -->
-    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7">
+    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -215,9 +218,9 @@
         </v-col>
       </v-row>
 
-      <div class="d-flex flex-row tw-py-10">
+      <div class="d-flex flex-row tw-py-10 justify-center">
         <div
-          class="tw-py-10"
+          class="tw-py-10 d-flex"
           v-for="valueProposition in valueProposition"
           :key="valueProposition.id"
         >
@@ -268,14 +271,14 @@
     <!-- Value Proposition End  -->
 
     <!-- Envision My Farm Start  -->
-    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7">
+    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
             contain
             src="/img/whitePaper/head4.png"
             max-width="835.18px"
-            height="60px"
+            max-height="60px"
           ></v-img>
         </v-col>
         <v-col class="d-flex justify-center">
@@ -304,22 +307,18 @@
           </div>
         </div>
       </div>
-      <div class="d-flex align-stretch tw-my-60">
-        <v-img
-          contain
-          src="/img/whitePaper/gameLargepic.png"
-          max-width="1202px"
-          max-height="946px"
-          style="position: absolute; left: 42px"
-        >
-        </v-img>
-        <v-img
-          src="/img/whitePaper/hen.png"
-          max-width="294px"
-          max-height="478px"
-          contain
-          style="left: 1057px; top: 169px"
-        ></v-img>
+      <div class="d-flex justify-center flex-row container">
+        <div class="col">
+          <div class="gameUIimg">
+            <v-img
+              src="/img/whitePaper/hen.png"
+              max-width="294px"
+              max-height="478px"
+              contain
+              :class="!$vuetify.breakpoint.mobile ? 'left1057' : 'left73'"
+            ></v-img>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Envision My Farm End -->
@@ -365,7 +364,7 @@
     <!-- Mini Game End -->
 
     <!-- Play - Relax - Earn Start  -->
-    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7">
+    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -438,7 +437,7 @@
     <!-- Play - Relax - Earn End  -->
 
     <!-- Marketplace breeding center Start  -->
-    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7">
+    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -462,11 +461,7 @@
           ></v-img>
         </div>
         <div class="col-6">
-          <div
-          class="d-flex"
-          v-for="textList in textList"
-          :key="textList.id"
-          >
+          <div class="d-flex" v-for="textList in textList" :key="textList.id">
             <PlayButton class="tw-mx-2" style="width: 24px" />
             <p class="tw-font-medium ma-4" align="start">
               {{ textList.text }}
@@ -474,11 +469,11 @@
           </div>
           <div class="d-flex justify-center">
             <v-img
-          src="/img/whitePaper/fruitBasket.png"
-          max-width="271px"
-          max-height="222px"
-          contain
-          ></v-img>
+              src="/img/whitePaper/fruitBasket.png"
+              max-width="271px"
+              max-height="222px"
+              contain
+            ></v-img>
           </div>
         </div>
       </div>
@@ -486,7 +481,7 @@
     <!-- Marketplace breeding center End -->
 
     <!-- Roadmap Start  -->
-    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7">
+    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -557,28 +552,275 @@
           <PageNo data="10" />
         </v-col>
       </v-row>
-      <div class="d-flex flex-row">
-        <div class="col-12">
-          <div class="paper"></div>
-        </div>
+
+      <div class="d-flex justify-center">
+        <v-img
+          src="/img/whitePaper/EmptyPaper.png"
+          width="1800px"
+          max-height="759px"
+          contain
+          position="absolute"
+        >
+          <div class="d-flex flex-row justify-space-between">
+            <p class="ma-0 ma-12 tw-text-2xl fontFamily">
+              Total Supply:
+              <span class="fontFamily black--text">1,000,000,000 MFT</span>
+            </p>
+            <v-img
+              src="/img/whitePaper/MFTImg.png"
+              max-width="213px"
+              max-height="182px"
+              contain
+              style="margin-top: -2%"
+              class="mr-12"
+            ></v-img>
+          </div>
+          <div class="d-flex flex-row" style="margin-top: -35px">
+            <div class="ml-4">
+              <div class="mt-4" v-for="list1 in list1" :key="list1.id">
+                <p class="ma-0 tw-text-xl ml-11 fontFamily">
+                  {{ list1.heading }}<br />
+                  <span class="black--text fontFamily">{{ list1.amount }}</span>
+                </p>
+              </div>
+            </div>
+            <div class="ml-4">
+              <div class="mt-4" v-for="list2 in list2" :key="list2.id">
+                <p class="ma-0 tw-text-xl ml-11 fontFamily">
+                  {{ list2.heading }}<br />
+                  <span class="black--text fontFamily">{{ list2.amount }}</span>
+                </p>
+              </div>
+            </div>
+            <div class="ml-16 d-flex" style="margin-left: -80px">
+              <v-row>
+                <v-col cols="6" align-self="end">
+                  <v-img
+                    src="/img/whitePaper/cdImg.png"
+                    max-width="228px"
+                    max-height="228px"
+                    contain
+                  ></v-img>
+                </v-col>
+                <v-col cols="6">
+                  <div
+                    v-for="colorList in colorList"
+                    :key="colorList.id"
+                    class="d-flex mt-2"
+                  >
+                    <div class="Circle" style="background-color: #d14d37"></div>
+                    <p
+                      class="tw-text-base tw-font-medium ml-2 w-100"
+                      style="font-family: Mitr !important; color: #333333"
+                    >
+                      {{ colorList.title }}
+                    </p>
+                  </div>
+                </v-col>
+              </v-row>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <p class="tw-font-xl ml-9" style="font-family: SVN-SAF !important">
+              ** MFT tokens will be burned 50% everytime players use to buy
+              in-game items, the remaining 50% will be returned to play to earn
+            </p>
+            <p
+              class="tw-font-xl"
+              style="font-family: SVN-SAF !important; color: #882900"
+            >
+              Initial Market Status <br />
+              <span class="black--text" style="font-family: SVN-SAF !important"
+                >Initial Circulating Supply: 1.000.000.000 $MFT
+              </span>
+            </p>
+            <v-img
+              src="/img/whitePaper/home.png"
+              max-width="391px"
+              max-height="395"
+              contain
+              style="top: -39px; left: 65px"
+            ></v-img>
+          </div>
+        </v-img>
       </div>
     </div>
     <!-- MFT Token Allocation End -->
+
+    <!-- Team Start  -->
+    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
+      <v-row class="tw-py-7">
+        <v-col class="d-flex justify-center" cols="10">
+          <v-img
+            contain
+            src="/img/whitePaper/head11.png"
+            max-width="894px"
+            height="70px"
+          ></v-img>
+        </v-col>
+        <v-col class="d-flex justify-center">
+          <PageNo data="11" />
+        </v-col>
+      </v-row>
+      <v-container class="">
+        <v-row class="" justify="center" no-gutters>
+          <v-col
+            cols="2"
+            align="center"
+            class="d-flex justify-center mt-4"
+            v-for="item in teamMember"
+            :key="item.id"
+          >
+            <div>
+              <v-img
+                src="/img/whitePaper/imageBlock.png"
+                max-width="171px"
+                max-height="177px"
+                contain
+                position="absolute"
+              >
+                <v-img
+                  src="/img/whitePaper/personImg.png"
+                  max-width="102px"
+                  max-height="103px"
+                  position="relative"
+                  style="top: 28px; left: 5px"
+                >
+                </v-img>
+              </v-img>
+              <p
+                class="tw-text-base tw-font-semibold"
+                style="font-family: Mitr !important"
+              >
+                {{ item.name }}
+              </p>
+              <p class="tw-text-base" style="font-family: Mitr !important">
+                Co-Founder
+              </p>
+              <p class="tw-text-base" style="font-family: Mitr !important">
+                CEO
+              </p>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+    <!-- Team End  -->
+
+    <!-- Partner Start  -->
+    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
+      <v-row class="tw-py-7">
+        <v-col class="d-flex justify-center" cols="10">
+          <v-img
+            contain
+            src="/img/whitePaper/head12.png"
+            max-width="894px"
+            height="70px"
+          ></v-img>
+        </v-col>
+        <v-col class="d-flex justify-center">
+          <PageNo data="12" />
+        </v-col>
+      </v-row>
+      <div class="mx-5">
+        <div class="partners-woodblock2 mx-auto d-flex">
+          <v-row
+            justify="center"
+            class=""
+            :class="$vuetify.breakpoint.mdAndUp ? 'tw-p-24 full-h' : 'pa-10'"
+            no-gutters
+          >
+            <v-col
+              cols="3"
+              align="center"
+              align-self="center"
+              v-for="(partner, index) in partnerImg"
+              :key="index"
+            >
+              <v-img
+                alt="partners"
+                max-width="150px"
+                max-height="150px"
+                :src="partner.img"
+                :lazy-src="partner.img"
+              ></v-img>
+            </v-col>
+          </v-row>
+        </div>
+      </div>
+    </div>
+    <!-- Partner End  -->
+
+    <!-- Connect  -->
+    <div class="header-main">
+      <v-row class="tw-py-7">
+        <v-col class="d-flex justify-center" cols="10">
+          <v-img
+            contain
+            src="/img/whitePaper/head13.png"
+            max-width="894px"
+            height="70px"
+          ></v-img>
+        </v-col>
+        <v-col class="d-flex justify-center">
+          <PageNo data="12" />
+        </v-col>
+      </v-row>
+      <v-row class="d-flex justify-center">
+        <v-col align-self="center" align="center">
+          <v-img
+            v-if="!$vuetify.breakpoint.mobile"
+            class="tw-mx-auto tw-my-16"
+            contain
+            src="/img/LogoMyFarm.png"
+            max-width="702px"
+            max-height="429px"
+            height="392px"
+          ></v-img>
+          <p
+            class="tw-font-normal tw-text-4xl"
+            style="font-family: SVN-SAF !important"
+          >
+            For investment and partnership opportunities
+          </p>
+        </v-col>
+        <v-col align-self="center" align="cetner">
+            <v-img
+            src="/dashboard/paper.png"
+            height="759px"
+            width="781px"
+            contain
+          >
+            <div style="margin-top: 112px; margin-left: 160px;">
+              <div class=" " v-for="item in socialIcons" :key="item.id">
+              <v-img
+                src="/img/whitePaper/iconBg.png"
+                max-width="86px"
+                max-height="77px"
+                contain
+                class="mt-4"
+              >
+                  <v-img :src="item.url" max-width="40px" max-height="40px" contain class="ma-5"><p>{{item.text}}</p></v-img>
+              </v-img>
+            </div>
+            </div>
+          </v-img>
+        </v-col>
+      </v-row>
+    </div>
   </div>
 </template>
 
 <script>
 import PlayButton from "@/assets/svg/playButton.svg";
 import RoadmapBlocks from "@/assets/svg/Roadmap-blocks.svg";
-import PageNo from "../../components/PageNo"
-import MFTLogo from "@/assets/svg/MFT-logo-round.svg";
+import PageNo from "../../components/PageNo";
 
 export default {
   components: {
     PlayButton,
     RoadmapBlocks,
     PageNo,
-    MFTLogo
   },
   data() {
     return {
@@ -630,7 +872,7 @@ export default {
         },
       ],
 
-      // Roadmap 
+      // Roadmap
       roadmapBlocks: [
         {
           id: 1,
@@ -691,12 +933,260 @@ export default {
           ],
         },
       ],
+      // MFT Allocation
+      list1: [
+        {
+          id: 0,
+          heading: "PUBLIC SALE",
+          amount: "100,000,000 (Lock 2 years)",
+        },
+        {
+          id: 1,
+          heading: "PRIVATE SALE",
+          amount: "200,000,000 (Lock 2 years)",
+        },
+        {
+          id: 2,
+          heading: "STRATEGIC PARTNERSHIP",
+          amount: "500,000,000 (Lock 2 years)",
+        },
+        {
+          id: 3,
+          heading: "TEAM & ADIVSOR",
+          amount: "100,000,000 (Lock 5 years)",
+        },
+      ],
+      list2: [
+        {
+          id: 0,
+          heading: "STAKING REWARD",
+          amount: "150,000,000",
+        },
+        {
+          id: 1,
+          heading: "COMMUNITY & MARKETING",
+          amount: "30,000,000",
+        },
+        {
+          id: 2,
+          heading: "PLAY-TO-EARN REWARD",
+          amount: "500,000,000",
+        },
+        {
+          id: 3,
+          heading: "LIQUIDITY DEX",
+          amount: "50,000,000",
+        },
+      ],
+      colorList: [
+        {
+          id: 0,
+          color: "#D14D37",
+          title: "Public Scale",
+        },
+        {
+          id: 1,
+          color: "#F47560",
+          title: "Private Sale",
+        },
+        {
+          id: 2,
+          color: "#FFA800",
+          title: "Strategic Partnership",
+        },
+        {
+          id: 3,
+          color: "#577D9A",
+          title: "Team & Advisors",
+        },
+        {
+          id: 4,
+          color: "#228E80",
+          title: "Staking Reward",
+        },
+        {
+          id: 5,
+          color: "#17772A",
+          title: "Community & Marketing",
+        },
+        {
+          id: 6,
+          color: "#325475",
+          title: "Play-to-earn",
+        },
+        {
+          id: 7,
+          color: "#D18600",
+          title: "Liquidity Dex",
+        },
+      ],
+
+      // Team
+      teamMember: [
+        {
+          id: 0,
+          name: "Truong Tran",
+          founder: "Co-Founder",
+          position1: "CEO",
+        },
+        {
+          id: 1,
+          name: "Thuan Nguyen",
+          founder: "Co-Founder",
+          position1: "CTO",
+        },
+        {
+          id: 2,
+          name: "Duc Hoang",
+          founder: "Co-Founder",
+          position1: "Head of Development",
+        },
+        {
+          id: 3,
+          name: "Sang Nguyen",
+          founder: "Co-Founder",
+          position1: "CPO",
+        },
+        {
+          id: 4,
+          name: "Cakoi",
+          founder: "Co-Founder",
+          position1: "CMO",
+        },
+        {
+          id: 5,
+          name: "Leo Ngo",
+          position1: "CM",
+        },
+        {
+          id: 6,
+          name: "Hung Dang",
+          position1: "Game Artist",
+        },
+        {
+          id: 7,
+          name: "Anh Pham",
+          position1: "3D Designer",
+        },
+        {
+          id: 8,
+          name: "Tung Le",
+          position1: "Game Developer",
+        },
+        {
+          id: 9,
+          name: "Thanh Chu",
+          position1: "Thanh Chu",
+        },
+        {
+          id: 10,
+          name: "Cong Nguyen",
+          position1: "Game Developer",
+        },
+        {
+          id: 11,
+          name: "Lam Nghiem",
+          position1: "Game Developer",
+        },
+        {
+          id: 12,
+          name: "Quyen Vuong",
+          position1: "Game Developer",
+        },
+        {
+          id: 13,
+          name: "Hieu Nguyen",
+          position1: "Fullstack Developer",
+        },
+        {
+          id: 14,
+          name: "Tien Tran",
+          position1: "Fullstack Developer",
+        },
+        {
+          id: 15,
+          name: "Xuan Thinh",
+          position1: "Graphic Designer",
+        },
+        {
+          id: 16,
+          name: "Lam Nguyen",
+          position1: "Animator",
+        },
+        {
+          id: 17,
+          name: "Hieu Le",
+          position1: "3D Artist",
+        },
+        {
+          id: 18,
+          name: "Hung Nguyen",
+          position1: "3D Motion",
+        },
+        {
+          id: 19,
+          name: "Nam Nguyen",
+          position1: "Concept Artist",
+        },
+      ],
+      // Partner
+      partnerImg: [
+        { img: "/img/partners/MasterVenturesHorizontal.png" },
+        { img: "/img/partners/Sparklogo.png" },
+        { img: "/img/partners/vendetta.png" },
+        { img: "/img/partners/ld.png" },
+        // ],
+        // partnerImgCol2: [
+        { img: "/img/partners/moonwhale.png" },
+        { img: "/img/partners/PancakeSwap.png" },
+        { img: "/img/partners/poolz.png" },
+        { img: "/img/partners/mirabo.png" },
+        // ],
+        // partnerImgCol3: [
+        { img: "/img/partners/genBlock.png" },
+        { img: "/img/partners/ngcVenture.png" },
+        { img: "/img/partners/signum-capital-logo_transparent.png" },
+        { img: "/img/partners/coinGeeko.png" },
+      ],
+
+      // Connect
+      socialIcons: [
+        { 
+          id: 0,
+          text: "contact@myfarm.finance",
+          url: "/img/socialIcons/EnvelopeSimple.png" },
+        { 
+          id: 1,
+          text: "https://t.me/myfarmOfficial",
+          text2: "https://t.me/myfarmANN",
+          url: "/img/socialIcons/Telegram.png" },
+        { 
+          id: 2,
+          text: "https://twitter.com/My_Farm",
+          url: "/img/socialIcons/Twitter.png" },
+        { 
+          id: 3,
+          text: "myfarm.finance",
+          url: "/img/socialIcons/Globe.png" },
+        { 
+          id: 4,
+          text: "https://www.reddit.com/user/myFarm",
+          url: "/img/socialIcons/Reddit - Negative.png" },
+        { 
+          id: 5,
+          text: "https://medium.com/@myfarm",
+          url: "/img/socialIcons/Medium - Negative.png" },
+      ],
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.fontFamily {
+  font-family: SVN-SAF !important;
+  color: #882900;
+}
 .header-main {
   background-image: url("../../static/img/bg-1.png");
   background-size: cover;
@@ -718,7 +1208,7 @@ export default {
   background-image: url("../../static/img/whitePaper/game.png");
   width: 700px;
   height: 715px;
-  position: absolute;
+  // position: absolute;
   background-size: 100%;
 }
 // Introductoin to MyFarm CSS End
@@ -774,12 +1264,79 @@ export default {
 }
 // Value Proposition End
 
-// MFT Token Allocation Start
-.paper {
-  background-image: url("../../static/img/whitePaper/EmptyPaper.png");
+// Envision start
+.gameUIimg {
+  background-image: url("../../static/img/whitePaper/gameLargepic.png");
+  max-width: 1732px;
+  height: 739px;
   background-size: 100%;
-  height: 759px;
+  background-position: cover;
+  margin-bottom: 0px;
+}
+.left42 {
+  // position: absolute;
+  left: 42px;
+}
+.left20 {
+  // position: absolute;
+  left: 20%;
+}
+.left1057 {
+  // left: 1057px;
+  top: 169px;
+}
+.left73 {
+  left: 73%;
+  top: 169px;
+}
+// Envision End
+
+// MFT Token Allocation Start
+// .paper {
+//   background-image: url("../../static/img/whitePaper/EmptyPaper.png");
+//   background-size: 100%;
+//   height: 759px;
+//   width: 1800px;
+//   margin-top: 80px;
+// }
+.Circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  // background-color: #D14D37;
+}
+.backgroundImage {
+  background-image: url("../../static/img/whitePaper/backgroundImg.png");
+  background-size: cover;
+  height: auto;
   width: 100%;
+  // object-fit: cover;
 }
 // MFT Token Allocation End
+
+// Partners Start
+.partners-woodblock2 {
+  background-image: url("../../static/img/partners-woodblock.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 824px;
+  max-width: 1271px;
+  // display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// Partners End
+
+// Connect Start
+.paper {
+  background-image: url("../../static/dashboard/paper.png");
+  background-position: 100%;
+  background-size: 100%;
+  height: 759px;
+  width: 781px;
+  margin-top: 10px;
+}
 </style>
