@@ -792,7 +792,7 @@
             contain
           >
             <div style="margin-top: 112px; margin-left: 160px;">
-              <div class=" " v-for="item in socialIcons" :key="item.id">
+              <div class="d-flex align-center" v-for="item in socialIcons" :key="item.id">
               <v-img
                 src="/img/whitePaper/iconBg.png"
                 max-width="86px"
@@ -800,9 +800,18 @@
                 contain
                 class="mt-4"
               >
-                  <v-img :src="item.url" max-width="40px" max-height="40px" contain class="ma-5"><p>{{item.text}}</p></v-img>
+                  <v-img :src="item.url" max-width="40px" max-height="40px" contain class="ma-5"></v-img>
               </v-img>
+              <p class="mx-10 mt-5">{{item.text}} <br/> {{item.text2}}</p>
             </div>
+            <v-img
+            src="/img/whitePaper/petImg.png"
+            width="303px"
+            height="303px"
+            contain
+            position="relative"
+            style="left: 416px; margin-top: -178px;"
+            ></v-img>
             </div>
           </v-img>
         </v-col>
