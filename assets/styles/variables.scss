@@ -1,0 +1,24 @@
+// // Variables you want to modify
+// $btn-border-radius: 0px;
+
+// // If you need to extend Vuetify SASS lists
+// $material-light: ( cards: blue );
+
+@import '~vuetify/src/styles/styles.sass';
+
+$bodyfont:'Mitr', sans-serif;
+$headingfont:'Mitr', sans-serif;
+
+$btn-text-color: #882900;
+
+.btn-text-color {
+    color: $btn-text-color;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+.v-dialog {
+        box-shadow: none !important;
+    }
