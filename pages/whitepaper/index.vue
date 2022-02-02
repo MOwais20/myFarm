@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pa-0">
+  <v-container fluid class="pa-0" style="overflow: hidden">
     <div class="tw-container header-main tw-h-36 tw-max-w-full tw-py-7">
       <div class="tw-my-16">
         <v-img
@@ -156,26 +156,25 @@
       </v-row>
 
       <v-row class="d-flex tw-py-7">
-        <v-col class="d-flex justify-center" cols="6" align="center">
+        <v-col class="d-flex justify-end" cols="6" lg="6" sm="6" xl="6" align="center">
           <v-img
             contain
             src="/img/whitePaper/board.png"
-            width="704px"
-            style="position: absolute"
+            max-width='912px'
+            max-height='725px'
           >
             <div>
               <v-img
                 class="ma-4"
                 contain
                 src="/img/LogoMyFarm.png"
-                width="240px"
-                height="147px"
-                style="position: relative"
+                max-width="240px"
+                max-height="147px"
               ></v-img>
               <div class="d-flex justify-space-around">
                 <div class="">
                   <p class="tw-font-normal white--text cricle1">$180B</p>
-                  <p class="yellow--text tw-text-xl">
+                  <p class="yellow--text tw-text-xl mt-2">
                     Global Gaming <br />
                     2021
                   </p>
@@ -183,7 +182,7 @@
                 </div>
                 <div>
                   <p class="tw-font-normal white--text cricle2">$21B</p>
-                  <p class="yellow--text tw-text-xl">
+                  <p class="yellow--text tw-text-xl mt-2">
                     NFT Market <br />
                     2021
                   </p>
@@ -196,7 +195,7 @@
               <div class="d-flex justify-space-around">
                 <div class="">
                   <p class="tw-text-base white--text cricle3">$100m</p>
-                  <p class="yellow--text tw-text-xl">My Farm</p>
+                  <p class="yellow--text tw-text-xl mt-2">My Farm</p>
                   <p class="white--text tw-text-sm">
                     Share of Available Market
                   </p>
@@ -205,16 +204,20 @@
             </div>
           </v-img>
         </v-col>
-        <v-col>
-          <ul>
-            <li class="tw-my-4">
+        <v-col lg="6" sm="6" xl="6">
+          <div class="d-flex" style="max-width: 808px">
+              <Arrow class=" mr-4 hover-shd" width="24px" height="24px"/>
+            <p class="tw-text-xl d-flex" style="font-family: Mitr !important">
               The demand for NFTs is continuing to surge and the NFT market is
               showing no signs of slowing down. Year-to-date, within less than
               three months, the combined market cap of 6 majors gaming NFT
               projects has increased by 1,265% to reach a total capitalization
               >5,2 billion USD (Messari - 20th dec 2021).
-            </li>
-            <li class="">
+            </p>
+          </div>
+          <div class="d-flex mt-10" style="max-width: 808px">
+            <Arrow class=" mr-4 hover-shd" width="24px" height="24px"/>
+            <p class="tw-text-xl d-flex" style="font-family: Mitr !important">
               Furthermore, Covid-19 has had its impact on the gaming market as
               well, as millions of people experiencing lockdowns around the
               world started playing more games. A survey from March 2020
@@ -222,15 +225,16 @@
               time playing video games during the quarantine. My Farm believes
               that the Play-to-Earn model is opening a wide new window of
               solutions to ease the hardship brought on by the pandemic.
-            </li>
-          </ul>
-          <v-img
+            </p>
+          </div>
+          <div class="d-flex" style="max-width: 808px">
+            <v-img
             contain
             src="/img/whitePaper/manRest.png"
             width="413px"
             height="351px"
-            style="left: 20%"
           ></v-img>
+          </div>
         </v-col>
       </v-row>
     </div>
@@ -260,15 +264,15 @@
         >
           <v-img
             src="/img/whitePaper/cardImg.png"
-            max-width="452px"
-            max-height="829px"
+            max-width="583px"
+            max-height="729px"
             contain
           >
             <div class="d-flex justify-center ma-8">
               <v-img
                 class="text-center"
-                width="300px"
-                height="120px"
+                max-width="326px"
+                max-height="123px"
                 contain
                 src="/img/whitePaper/headerImg.png"
               >
@@ -281,20 +285,22 @@
                     justify-center
                     ma-9
                   "
+                  style="font-family: SVN-SAF !important"
                 >
                   {{ valueProposition.header }}
                 </p>
               </v-img>
             </div>
             <div class="ma-6">
-              <p>{{ valueProposition.text1 }}</p>
-              <p>{{ valueProposition.text2 }}</p>
+              <p class="tw-text-xl tw-font-medium" style="font-family: Mitr !important">{{ valueProposition.text1 }}</p>
+              <p class="mt-10 tw-text-xl tw-font-medium" style="font-family: Mitr !important">{{ valueProposition.text2 }}</p>
             </div>
             <div class="d-flex justify-center">
               <v-img
+                :class="valueProposition.id === 2 ? 'mt-16' : '' "
                 :src="valueProposition.img"
-                :width="valueProposition.width"
-                :height="valueProposition.height"
+                :max-width="valueProposition.width"
+                :max-height="valueProposition.height"
                 contain
               ></v-img>
             </div>
@@ -320,20 +326,18 @@
         </v-col>
       </v-row>
       <div class="d-flex flex-row tw-my-7">
-        <div class="col-6">
+        <div class="d-flex col-12 justify-center">
           <div class="d-flex">
-            <PlayButton class="tw-mx-2 hover-shd" />
-            <p class="tw-text-xl d-flex ma-2">
+            <Arrow class="mr-4" width='24px' height='24px' />
+            <p class="tw-text-xl d-flex" style="max-width: 809px; font-family: Mitr !important">
               In the near term, we encourage players to enjoy the open world of
               My Farm’s fresh sight and sound whether by themselves or with
               family and friends.
             </p>
           </div>
-        </div>
-        <div class="col-6">
           <div class="d-flex">
-            <PlayButton class="tw-mx-2 hover-shd" />
-            <p class="tw-text-xl d-flex ma-2">
+            <Arrow class="mr-4" width='24px' height='24px' />
+            <p class="tw-text-xl tw-font-medium" style="max-width: 740px; font-family: Mitr !important">
               The game is currently under development and we intend to involve
               the community even before the game launches (targeted Q1 2022) as
               we aim to be a community-governed game.
@@ -344,13 +348,15 @@
       <div class="d-flex justify-center flex-row container">
         <div class="col">
           <div class="gameUIimg">
-            <v-img
+           <div>
+              <v-img
               src="/img/whitePaper/hen.png"
-              max-width="294px"
+              max-width="435px"
               max-height="478px"
               contain
               :class="!$vuetify.breakpoint.mobile ? 'left1057' : 'left73'"
             ></v-img>
+           </div>
           </div>
         </div>
       </div>
@@ -868,15 +874,11 @@
 </template>
 
 <script>
-import PlayButton from "@/assets/svg/playButton.svg";
 import RoadmapBlocks from "@/assets/svg/Roadmap-blocks.svg";
-import PageNo from "../../components/PageNo";
 
 export default {
   components: {
-    PlayButton,
     RoadmapBlocks,
-    PageNo,
   },
   data() {
     return {
@@ -888,8 +890,8 @@ export default {
           text2:
             "Unlike the majority of NFT games that only focus on Play-to-Earn model, MY FARM and players build together a relaxing atmosphere on and off the game to create a Play-and-Earn balance.",
           img: "/img/whitePaper/playGame.png",
-          width: "250px",
-          height: "190px",
+          width: "340px",
+          height: "252px",
         },
         {
           id: 1,
@@ -898,8 +900,8 @@ export default {
           text2:
             "Mobile games expected to clai,m 57 of the digital games market in 2021 (Statista). My Farm mobile friendly platform brings on board more of these traditional gamers.",
           img: "/img/whitePaper/mobile.png",
-          width: "150px",
-          height: "180px",
+          width: "187px",
+          height: "240px",
         },
         {
           id: 2,
@@ -907,8 +909,8 @@ export default {
           text1:
             "We will create VR mode, players can immerse more fully in 3D nature and wonders of Metaverse",
           img: "/img/whitePaper/experience.png",
-          width: "200px",
-          height: "200px",
+          width: "239px",
+          height: "240px",
         },
       ],
 
@@ -1287,8 +1289,8 @@ export default {
 }
 
 .cricle1 {
-  width: 120px;
-  height: 120px;
+  width: 206px;
+  height: 206px;
   border-radius: 50%;
   background: #882900;
   display: flex;
@@ -1297,8 +1299,8 @@ export default {
 }
 
 .cricle2 {
-  width: 80px;
-  height: 80px;
+  width: 124px;
+  height: 124px;
   border-radius: 50%;
   background: #882900;
   display: flex;
@@ -1306,8 +1308,8 @@ export default {
   justify-content: center;
 }
 .cricle3 {
-  width: 60px;
-  height: 60px;
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
   background: #882900;
   display: flex;
@@ -1329,7 +1331,7 @@ export default {
 // Envision start
 .gameUIimg {
   background-image: url("../../static/img/whitePaper/gameLargepic.png");
-  max-width: 1732px;
+  width: 1732px;
   height: 739px;
   background-size: 100%;
   background-position: cover;
