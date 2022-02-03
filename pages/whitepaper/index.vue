@@ -156,12 +156,19 @@
       </v-row>
 
       <v-row class="d-flex tw-py-7">
-        <v-col class="d-flex justify-end" cols="6" lg="6" sm="6" xl="6" align="center">
+        <v-col
+          class="d-flex justify-end"
+          cols="6"
+          lg="6"
+          sm="6"
+          xl="6"
+          align="center"
+        >
           <v-img
             contain
             src="/img/whitePaper/board.png"
-            max-width='912px'
-            max-height='725px'
+            max-width="912px"
+            max-height="725px"
           >
             <div>
               <v-img
@@ -206,7 +213,7 @@
         </v-col>
         <v-col lg="6" sm="6" xl="6">
           <div class="d-flex" style="max-width: 808px">
-              <Arrow class=" mr-4 hover-shd" width="24px" height="24px"/>
+            <Arrow class="mr-4 hover-shd" width="24px" height="24px" />
             <p class="tw-text-xl d-flex" style="font-family: Mitr !important">
               The demand for NFTs is continuing to surge and the NFT market is
               showing no signs of slowing down. Year-to-date, within less than
@@ -216,7 +223,7 @@
             </p>
           </div>
           <div class="d-flex mt-10" style="max-width: 808px">
-            <Arrow class=" mr-4 hover-shd" width="24px" height="24px"/>
+            <Arrow class="mr-4 hover-shd" width="24px" height="24px" />
             <p class="tw-text-xl d-flex" style="font-family: Mitr !important">
               Furthermore, Covid-19 has had its impact on the gaming market as
               well, as millions of people experiencing lockdowns around the
@@ -229,11 +236,11 @@
           </div>
           <div class="d-flex" style="max-width: 808px">
             <v-img
-            contain
-            src="/img/whitePaper/manRest.png"
-            width="413px"
-            height="351px"
-          ></v-img>
+              contain
+              src="/img/whitePaper/manRest.png"
+              width="413px"
+              height="351px"
+            ></v-img>
           </div>
         </v-col>
       </v-row>
@@ -292,12 +299,22 @@
               </v-img>
             </div>
             <div class="ma-6">
-              <p class="tw-text-xl tw-font-medium" style="font-family: Mitr !important">{{ valueProposition.text1 }}</p>
-              <p class="mt-10 tw-text-xl tw-font-medium" style="font-family: Mitr !important">{{ valueProposition.text2 }}</p>
+              <p
+                class="tw-text-xl tw-font-medium"
+                style="font-family: Mitr !important"
+              >
+                {{ valueProposition.text1 }}
+              </p>
+              <p
+                class="mt-10 tw-text-xl tw-font-medium"
+                style="font-family: Mitr !important"
+              >
+                {{ valueProposition.text2 }}
+              </p>
             </div>
             <div class="d-flex justify-center">
               <v-img
-                :class="valueProposition.id === 2 ? 'mt-16' : '' "
+                :class="valueProposition.id === 2 ? 'mt-16' : ''"
                 :src="valueProposition.img"
                 :max-width="valueProposition.width"
                 :max-height="valueProposition.height"
@@ -311,7 +328,7 @@
     <!-- Value Proposition End  -->
 
     <!-- Envision My Farm Start  -->
-    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
+    <div class="backgroundImage tw-container tw-max-w-full">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -328,16 +345,22 @@
       <div class="d-flex flex-row tw-my-7">
         <div class="d-flex col-12 justify-center">
           <div class="d-flex">
-            <Arrow class="mr-4" width='24px' height='24px' />
-            <p class="tw-text-xl d-flex" style="max-width: 809px; font-family: Mitr !important">
+            <Arrow class="mr-4" width="24px" height="24px" />
+            <p
+              class="tw-text-xl d-flex"
+              style="max-width: 809px; font-family: Mitr !important"
+            >
               In the near term, we encourage players to enjoy the open world of
               My Farm’s fresh sight and sound whether by themselves or with
               family and friends.
             </p>
           </div>
           <div class="d-flex">
-            <Arrow class="mr-4" width='24px' height='24px' />
-            <p class="tw-text-xl tw-font-medium" style="max-width: 740px; font-family: Mitr !important">
+            <Arrow class="mr-4" width="24px" height="24px" />
+            <p
+              class="tw-text-xl tw-font-medium"
+              style="max-width: 740px; font-family: Mitr !important"
+            >
               The game is currently under development and we intend to involve
               the community even before the game launches (targeted Q1 2022) as
               we aim to be a community-governed game.
@@ -348,15 +371,15 @@
       <div class="d-flex justify-center flex-row container">
         <div class="col">
           <div class="gameUIimg">
-           <div>
+            <div>
               <v-img
-              src="/img/whitePaper/hen.png"
-              max-width="435px"
-              max-height="478px"
-              contain
-              :class="!$vuetify.breakpoint.mobile ? 'left1057' : 'left73'"
-            ></v-img>
-           </div>
+                src="/img/whitePaper/hen.png"
+                max-width="435px"
+                max-height="478px"
+                contain
+                style="position: absolute; margin-left: 85%; margin-top: 15%"
+              ></v-img>
+            </div>
           </div>
         </div>
       </div>
@@ -378,11 +401,14 @@
           <PageNo data="5" />
         </v-col>
       </v-row>
-      <div class="d-flex flex-row tw-my-7">
-        <div class="col-6">
+      <div class="d-flex flex-row tw-my-7 container">
+        <div class="col-6 tw-my-16">
           <div class="d-flex">
-            <PlayButton class="tw-mx-2 hover-shd" />
-            <p class="tw-text-xl d-flex ma-2">
+            <Arrow width="24px" height="24px" />
+            <p
+              class="tw-text-xl tw-font-medium d-flex ma-2"
+              style="max-width: 680px; font-family: Mitr !important"
+            >
               In order to enhance entertainment, as well as increase income for
               player more effectively and easily. My Farm will provide minigames
               that are mainly built on the interaction between player inside the
@@ -395,7 +421,7 @@
             src="/img/whitePaper/cow.png"
             contain
             max-width="397px"
-            max-height="502px"
+            max-height="506px"
             class="ma-6"
           ></v-img>
         </div>
@@ -418,59 +444,66 @@
           <PageNo data="6" />
         </v-col>
       </v-row>
-      <div class="d-flex flex-row tw-my-7">
-        <div class="col-6">
-          <div class="d-flex">
-            <PlayButton class="tw-mx-2 hover-shd" style="width: 24px" />
-            <p class="tw-text-xl ma-3">
-              At My Farm, we aim to balance the two main pillars:
-            </p>
+      <div class="container">
+        <div class="d-flex flex-row tw-my-7">
+          <div class="col-6">
+            <div class="d-flex">
+              <Arrow width="24px" height="24px" class="mt-4" />
+              <p class="tw-text-xl tw-font-semibold ma-3">
+                At My Farm, we aim to balance the two main pillars:
+              </p>
+            </div>
+            <li class="ml-16 tw-font-semibold">
+              Immersing players into a relax and zentitude playing environment
+            </li>
+            <li class="ml-16 tw-font-semibold">
+              Providing a revenue stream for every player
+            </li>
           </div>
-          <li class="ml-16">
-            Immersing players into a relax and zentitude playing environment
-          </li>
-          <li class="ml-16">Providing a revenue stream for every player</li>
         </div>
-      </div>
-      <div class="d-flex flex-row">
-        <div class="col-4">
-          <p
-            class="d-flex justify-center tw-font-normal white--text"
-            style="font-size: 40px; font-family: SVN-SAF !important"
-          >
-            Relax
-          </p>
-          <v-img
-            src="/img/whitePaper/relaxImg.png"
-            max-width="400px"
-            max-height="442px"
-            contain
-            class="d-flex justify-center"
-          ></v-img>
-        </div>
-        <div class="col-4">
-          <p
-            class="d-flex justify-center tw-font-normal white--text"
-            style="font-size: 40px; font-family: SVN-SAF !important"
-          >
-            Earn
-          </p>
-          <v-img
-            src="/img/whitePaper/earnImg.png"
-            max-width="400px"
-            max-height="442px"
-            contain
-            class="d-flex justify-center"
-          ></v-img>
-        </div>
-        <div class="col-4 ma-6">
-          <v-img
-            src="/img/whitePaper/henWithBox.png"
-            max-width="600px"
-            max-height="748px"
-            contain
-            class="d-flex justify-center"
-          ></v-img>
+        <div class="d-flex flex-row tw-my-16">
+          <div class="col-12 d-flex justify-space-between">
+            <div>
+              <p
+                class="d-flex justify-center tw-font-normal white--text"
+                style="font-size: 40px; font-family: SVN-SAF !important"
+              >
+                Relax
+              </p>
+              <v-img
+                src="/img/whitePaper/relaxImg.png"
+                max-width="400px"
+                max-height="442px"
+                contain
+                class="d-flex justify-center"
+              ></v-img>
+            </div>
+            <!-- </div> -->
+            <div>
+              <p
+                class="d-flex justify-center tw-font-normal white--text"
+                style="font-size: 40px; font-family: SVN-SAF !important"
+              >
+                Earn
+              </p>
+              <v-img
+                src="/img/whitePaper/earnImg.png"
+                max-width="400px"
+                max-height="442px"
+                contain
+                class="d-flex justify-center"
+              ></v-img>
+            </div>
+            <div>
+              <v-img
+                src="/img/whitePaper/henWithBox.png"
+                max-width="600px"
+                max-height="748px"
+                contain
+                class="d-flex justify-center"
+              ></v-img>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -492,28 +525,39 @@
         </v-col>
       </v-row>
       <div class="d-flex flex-row container ma-16">
-        <div class="col-6">
-          <v-img
-            src="/img/whitePaper/treeAddvertise.png"
-            max-width="740px"
-            max-height="655px"
-            contain
-          ></v-img>
-        </div>
-        <div class="col-6">
-          <div class="d-flex" v-for="textList in textList" :key="textList.id">
-            <PlayButton class="tw-mx-2" style="width: 24px" />
-            <p class="tw-font-medium ma-4" align="start">
-              {{ textList.text }}
-            </p>
-          </div>
-          <div class="d-flex justify-center">
+        <div class="col-12 d-flex justify-space-around">
+          <div>
             <v-img
-              src="/img/whitePaper/fruitBasket.png"
-              max-width="271px"
-              max-height="222px"
+              src="/img/whitePaper/treeAddvertise.png"
+              max-width="740px"
+              max-height="655px"
               contain
             ></v-img>
+          </div>
+          <div>
+            <div class="d-flex" v-for="textList in textList" :key="textList.id">
+              <Arrow
+                width="24px"
+                height="24px"
+                class="mt-4"
+                style="font-family: Mitr !important"
+              />
+              <p
+                class="tw-font-medium tw-text-xl ma-4"
+                align="start"
+                style="max-width: 680px"
+              >
+                {{ textList.text }}
+              </p>
+            </div>
+            <div class="d-flex justify-center">
+              <v-img
+                src="/img/whitePaper/fruitBasket.png"
+                max-width="271px"
+                max-height="307px"
+                contain
+              ></v-img>
+            </div>
           </div>
         </div>
       </div>
@@ -578,7 +622,7 @@
     <!-- Earning With my Farm End -->
 
     <!-- MFT Token Allocation Start -->
-    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7">
+    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7" style="overflow: hidden">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -593,62 +637,60 @@
         </v-col>
       </v-row>
 
-      <div class="d-flex justify-center">
-        <v-img
-          src="/img/whitePaper/EmptyPaper.png"
-          width="1800px"
-          max-height="759px"
-          contain
-          position="absolute"
-        >
+      <div class="d-flex justify-center tw-my-16">
+        <div class="EmptyPaper">
           <div class="d-flex flex-row justify-space-between">
-            <p class="ma-0 ma-12 tw-text-2xl fontFamily">
+            <div class="col-6 mt-16">
+              <p class="tw-text-2xl fontFamily" style="margin-left: 13%;">
               Total Supply:
               <span class="fontFamily black--text">1,000,000,000 MFT</span>
             </p>
-            <v-img
+            </div>
+            <div class="col-6 d-flex justify-end">
+              <v-img
               src="/img/whitePaper/MFTImg.png"
               max-width="213px"
               max-height="182px"
               contain
-              style="margin-top: -2%"
+              style="margin-top: -9%"
               class="mr-12"
             ></v-img>
+            </div>
           </div>
-          <div class="d-flex flex-row" style="margin-top: -35px">
+          <div class="d-flex flex-row justify-space-around mt-10">
             <div class="ml-4">
-              <div class="mt-4" v-for="list1 in list1" :key="list1.id">
-                <p class="ma-0 tw-text-xl ml-11 fontFamily">
+              <div :class="list1.id != 0 ? 'mt-10': ''" v-for="list1 in list1" :key="list1.id">
+                <p class="ma-0 tw-text-xl tw-font-normal ml-11 fontFamily">
                   {{ list1.heading }}<br />
-                  <span class="black--text fontFamily">{{ list1.amount }}</span>
+                  <span class="black--text tw-font-normal fontFamily">{{ list1.amount }}</span>
                 </p>
               </div>
             </div>
             <div class="ml-4">
-              <div class="mt-4" v-for="list2 in list2" :key="list2.id">
-                <p class="ma-0 tw-text-xl ml-11 fontFamily">
+              <div :class="list2.id != 0 ? 'mt-10' : ''" v-for="list2 in list2" :key="list2.id">
+                <p class="ma-0 tw-text-xl tw-font-normal ml-11 fontFamily">
                   {{ list2.heading }}<br />
-                  <span class="black--text fontFamily">{{ list2.amount }}</span>
+                  <span class="black--text tw-font-normal fontFamily">{{ list2.amount }}</span>
                 </p>
               </div>
             </div>
-            <div class="ml-16 d-flex" style="margin-left: -80px">
-              <v-row>
-                <v-col cols="6" align-self="end">
+            <div class="ml-16 d-flex mr-16">
+                <div>
                   <v-img
                     src="/img/whitePaper/cdImg.png"
-                    max-width="228px"
-                    max-height="228px"
+                    max-width="328px"
+                    max-height="328px"
                     contain
+                    style="margin-right: 153px"
                   ></v-img>
-                </v-col>
-                <v-col cols="6">
+                </div>
+                <div>
                   <div
                     v-for="colorList in colorList"
                     :key="colorList.id"
-                    class="d-flex mt-2"
+                    :class="colorList.id != 0 ? 'd-flex mt-6' : 'd-flex mt-2'"
                   >
-                    <div class="Circle" style="background-color: #d14d37"></div>
+                    <div class="Circle" :style="'background-color:' + '#d14d37'"></div>
                     <p
                       class="tw-text-base tw-font-medium ml-2 w-100"
                       style="font-family: Mitr !important; color: #333333"
@@ -656,12 +698,13 @@
                       {{ colorList.title }}
                     </p>
                   </div>
-                </v-col>
-              </v-row>
+                </div>
             </div>
           </div>
+          <v-container>
           <div class="d-flex flex-row">
-            <p class="tw-font-xl ml-9" style="font-family: SVN-SAF !important">
+            <div class="col-12 d-flex justify-space-between">
+            <p class="tw-font-xl ml-16 mr-16" style="font-family: SVN-SAF !important; max-width: 757px">
               ** MFT tokens will be burned 50% everytime players use to buy
               in-game items, the remaining 50% will be returned to play to earn
             </p>
@@ -679,10 +722,12 @@
               max-width="391px"
               max-height="395"
               contain
-              style="top: -39px; left: 65px"
+              style="top: -109px; left: 127px"
             ></v-img>
+            </div>
           </div>
-        </v-img>
+          </v-container>
+        </div>
       </div>
     </div>
     <!-- MFT Token Allocation End -->
@@ -1336,6 +1381,8 @@ export default {
   background-size: 100%;
   background-position: cover;
   margin-bottom: 0px;
+  position: relative;
+  bottom: -23px;
 }
 .left42 {
   // position: absolute;
@@ -1356,13 +1403,13 @@ export default {
 // Envision End
 
 // MFT Token Allocation Start
-// .paper {
-//   background-image: url("../../static/img/whitePaper/EmptyPaper.png");
-//   background-size: 100%;
-//   height: 759px;
-//   width: 1800px;
-//   margin-top: 80px;
-// }
+.EmptyPaper {
+    background-image: url("../../static/img/whitePaper/EmptyPaper.png");
+    width: 1800px;
+    height: 732px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .Circle {
   width: 28px;
   height: 28px;
@@ -1375,6 +1422,10 @@ export default {
   height: auto;
   width: 100%;
   // object-fit: cover;
+}
+.fontFamily {
+  font-family: SVN-SAF !important;
+  color: #882900;
 }
 // MFT Token Allocation End
 
