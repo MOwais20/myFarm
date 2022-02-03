@@ -851,8 +851,8 @@
           <PageNo data="12" />
         </v-col>
       </v-row>
-      <v-row class="d-flex justify-center">
-        <v-col align-self="center" align="center">
+      <div class="d-flex flex-row justify-space-around tw-my-28">
+        <div>
           <v-img
             v-if="!$vuetify.breakpoint.mobile"
             class="tw-mx-auto tw-my-16"
@@ -868,15 +868,15 @@
           >
             For investment and partnership opportunities
           </p>
-        </v-col>
-        <v-col align-self="center" align="cetner">
-          <v-img
+        </div>
+        <div class="paper">
+          <!-- <v-img
             src="/dashboard/paper.png"
             height="759px"
             width="781px"
             contain
-          >
-            <div style="margin-top: 112px; margin-left: 160px">
+          > -->
+            <div style="margin-top: 66px; margin-left: 160px">
               <div
                 class="d-flex align-center"
                 v-for="item in socialIcons"
@@ -911,9 +911,9 @@
                 style="left: 416px; margin-top: -178px"
               ></v-img>
             </div>
-          </v-img>
-        </v-col>
-      </v-row>
+          <!-- </v-img> -->
+        </div>
+      </div>
     </div>
   </v-container>
 </template>
@@ -1450,7 +1450,7 @@ export default {
   background-image: url("../../static/dashboard/paper.png");
   background-position: 100%;
   background-size: 100%;
-  height: 759px;
+  height: 732px;
   width: 781px;
   margin-top: 10px;
 }
