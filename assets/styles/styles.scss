@@ -31,6 +31,18 @@
     font-family: 'iCiel Stabile' !important;
 }
 
+.default-text-color {
+    color: #882900;
+}
+
+
+.linear-gradient-1 {
+    background: -webkit-linear-gradient(#F39C09
+    , #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .btn-text-wd {
     font-family: Mitr;
     font-size: 32px;
@@ -53,6 +65,10 @@
 }
 
 .pointer {
+    cursor: pointer;
+}
+
+.pointer-simple {
     cursor: pointer;
 }
 

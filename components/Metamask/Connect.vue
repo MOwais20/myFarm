@@ -242,7 +242,6 @@ export default {
   mounted() {
     if (localStorage && localStorage.getItem("mft_user")) {
       const user = JSON.parse(localStorage.getItem("mft_user"));
-      console.log('user', user);
       this.metaMask.account = user.user.public_address;
       this.metaMaskLoggedIn = true;
     }

@@ -86,10 +86,4 @@ export default {
   margin: 5px;
 }
 
-.paper-overlay {
-  // width: 800px;
-  height: 227px;
-  background: #d6b694;
-  border-radius: 30px;
-}
 </style>

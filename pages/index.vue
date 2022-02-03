@@ -36,6 +36,7 @@
         </div>
       </div>
     </div>
+
     <div class="second-block">
       <div
         class="max-wd tw-mx-auto"
