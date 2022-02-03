@@ -690,7 +690,7 @@
                     :key="colorList.id"
                     :class="colorList.id != 0 ? 'd-flex mt-6' : 'd-flex mt-2'"
                   >
-                    <div class="Circle" :style="'background-color:' + '#d14d37'"></div>
+                    <div class="Circle" :style="'background-color:' + colorList.color"></div>
                     <p
                       class="tw-text-base tw-font-medium ml-2 w-100"
                       style="font-family: Mitr !important; color: #333333"
