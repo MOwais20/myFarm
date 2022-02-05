@@ -1,16 +1,12 @@
 <template>
-  <v-container fluid class="pa-0">
+  <v-container fluid class="pa-0" style="overflow: hidden">
     <div class="tw-container header-main tw-h-36 tw-max-w-full tw-py-7">
-
-      <HeaderFull />
-
       <div class="tw-my-16">
         <v-img
           v-if="!$vuetify.breakpoint.mobile"
           class="tw-mx-auto tw-my-16"
           contain
           src="/img/LogoMyFarm.png"
-          lazy-src="/img/LogoMyFarm.png"
           :max-width="$vuetify.breakpoint.mobile ? '300px' : '641px'"
           height="392px"
         ></v-img>
@@ -69,10 +65,11 @@
         "
       >
         <v-img
-          style="left: 7rem"
+          :style="$vuetify.breakpoint.lg ? '' : 'left: 7rem'"
+          
           src="/img/whitePaper/game.png"
-          max-width="859px"
-          height="715px"
+          :max-width="$vuetify.breakpoint.lg ? '659px' : '859px'"
+          :height="$vuetify.breakpoint.lg ? '515px' : '715px'"
           contain
           lazy-src="/img/whitePaper/game.png"
           class="d-flex align-center justify-end mx-auto tw-relative"
@@ -92,24 +89,24 @@
               contain
               src="/img/LogoMyFarm.png"
               lazy-src="/img/LogoMyFarm.png"
-              max-width="219px"
+              :max-width="$vuetify.breakpoint.lg ? '170px' : '219px'"
               height="134px"
             ></v-img>
-            <p class="tw-font-medium text-center mb-2">
+            <p :class="$vuetify.breakpoint.lg ? 'tw-text-base text-center mb-2' : 'tw-font-medium text-center mb-2'">
               is created by a group of professional blockchain and game
               programmers with many years of experience, the office is located
               in singapore.
             </p>
             <div class="d-flex">
-              <PlayButton class="tw-mx-2 hover-shd" style="width: 24px" />
-              <p class="tw-font-medium ma-2" align="start">
+              <Arrow :width="$vuetify.breakpoint.lg ? '18px' : '24px'" :height="$vuetify.breakpoint.lg ? '18px' : '24px'" :class="$vuetify.breakpoint.lg ? 'mt-1' : 'mt-3'" />
+              <p :class="$vuetify.breakpoint.lg ? 'tw-text-base text-center mb-2' : 'tw-font-medium ma-2'" align="start">
                 A blockchain-based relaxing game inspired by the way of farming
                 in the Asian region.
               </p>
             </div>
             <div class="d-flex">
-              <PlayButton class="tw-mx-2 hover-shd" style="width: 15%" />
-              <p class="tw-font-medium ma-2" align="start">
+              <Arrow :width="$vuetify.breakpoint.lg ? '18px' : '24px'" :height="$vuetify.breakpoint.lg ? '18px' : '24px'" :class="$vuetify.breakpoint.lg ? 'mt-1' : 'mt-3'" />
+              <p :class="$vuetify.breakpoint.lg ? 'tw-text-base text-center mb-2' : 'tw-font-medium ma-2'" align="start">
                 At My Farm, players will play the role of a farmer who is happy
                 with growing, raising, and selling his agricultural products.
                 From there, each participant will contribute to the construction
@@ -119,21 +116,21 @@
           </div>
         </v-img>
 
-        <div class="d-flex align-center tw-relative" style="right: 5rem">
+        <div class="d-flex align-end tw-relative" :style="$vuetify.breakpoint.lg ? 'right: 6rem': 'right: 5rem'">
           <v-img
             contain
             src="/img/whitePaper/GameUi.png"
-            max-width="1010px"
+            :max-width="$vuetify.breakpoint.lg ? '670px' : '1010px'"
             height="552px"
             class="d-flex align-end align-self-end justify-end tw-static"
           >
             <v-img
               contain
               class="tw-relative"
-              style="left: 70%; z-index: 2"
+              style="left: 66%; z-index: 2"
               src="/img/tractor.png"
-              height="332px"
-              max-width="331px"
+              :height="$vuetify.breakpoint.lg ? '250px' : '332px'"
+              :max-width="$vuetify.breakpoint.lg ? '250px' : '331px'"
               lazy-src="/img/tractor.png"
             ></v-img>
           </v-img>
@@ -159,38 +156,44 @@
       </v-row>
 
       <v-row class="d-flex tw-py-7">
-        <v-col class="d-flex justify-center" cols="6" align="center">
+        <v-col
+          class="d-flex justify-end"
+          cols="6"
+          lg="6"
+          sm="6"
+          xl="6"
+          align="center"
+        >
           <v-img
             contain
             src="/img/whitePaper/board.png"
-            width="704px"
-            style="position: absolute"
+            :max-width="$vuetify.breakpoint.lg ? '672px' : '912px'"
+            max-height="725px"
           >
             <div>
               <v-img
                 class="ma-4"
                 contain
                 src="/img/LogoMyFarm.png"
-                width="240px"
-                height="147px"
-                style="position: relative"
+                :max-width="$vuetify.breakpoint.lg ? '171px' : '240px'"
+                max-height="147px"
               ></v-img>
               <div class="d-flex justify-space-around">
                 <div class="">
-                  <p class="tw-font-normal white--text cricle1">$180B</p>
-                  <p class="yellow--text tw-text-xl">
+                  <p :class="$vuetify.breakpoint.lg ? 'Cricle1 tw-font-light white--text' : 'tw-font-normal white--text cricle1'">$180B</p>
+                  <p :class="$vuetify.breakpoint.lg ? 'tw-text-lg yellow--text mt-2' : 'yellow--text tw-text-xl mt-2'">
                     Global Gaming <br />
                     2021
                   </p>
-                  <p class="white--text tw-text-sm">Total Available Market</p>
+                  <p :class="$vuetify.breakpoint.lg ? 'white--text tw-text-xs' : 'white--text tw-text-sm'">Total Available Market</p>
                 </div>
                 <div>
-                  <p class="tw-font-normal white--text cricle2">$21B</p>
-                  <p class="yellow--text tw-text-xl">
+                  <p :class="$vuetify.breakpoint.lg ? 'Cricle2 tw-font-light white--text' : 'tw-font-normal white--text cricle2'">$21B</p>
+                  <p :class="$vuetify.breakpoint.lg ? 'tw-text-lg yellow--text mt-2' : 'yellow--text tw-text-xl mt-2'">
                     NFT Market <br />
                     2021
                   </p>
-                  <p class="white--text tw-text-sm">
+                  <p :class="$vuetify.breakpoint.lg ? 'white--text tw-text-xs' : 'white--text tw-text-sm'">
                     Serviceable Available Market
                   </p>
                 </div>
@@ -198,9 +201,9 @@
 
               <div class="d-flex justify-space-around">
                 <div class="">
-                  <p class="tw-text-base white--text cricle3">$100m</p>
-                  <p class="yellow--text tw-text-xl">My Farm</p>
-                  <p class="white--text tw-text-sm">
+                  <p :class="$vuetify.breakpoint.lg ? 'Cricle3 tw-font-normal tw-text-sm white--text' : 'tw-font-normal white--text cricle3'">$100m</p>
+                  <p :class="$vuetify.breakpoint.lg ? 'tw-text-lg yellow--text mt-2' : 'yellow--text tw-text-xl mt-2'">My Farm</p>
+                  <p :class="$vuetify.breakpoint.lg ? 'white--text tw-text-xs' : 'white--text tw-text-sm'">
                     Share of Available Market
                   </p>
                 </div>
@@ -208,16 +211,20 @@
             </div>
           </v-img>
         </v-col>
-        <v-col>
-          <ul>
-            <li class="tw-my-4">
+        <v-col lg="6" sm="6" xl="6">
+          <div class="d-flex" :style="$vuetify.breakpoint.lg ? 'max-width: 608px' : 'max-width: 808px'">
+            <Arrow class="mr-2" :width="$vuetify.breakpoint.lg ? '18px' : '24px'" :height="$vuetify.breakpoint.lg ? '18px' : '24px'" :class="$vuetify.breakpoint.lg ? 'mt-1' : 'mt-3'" />
+            <p class="tw-text-xl d-flex" :style="$vuetify.breakpoint.lg ? 'font-size: 14px; font-family: Mitr !important' : 'font-family: Mitr !important'">
               The demand for NFTs is continuing to surge and the NFT market is
               showing no signs of slowing down. Year-to-date, within less than
               three months, the combined market cap of 6 majors gaming NFT
               projects has increased by 1,265% to reach a total capitalization
               >5,2 billion USD (Messari - 20th dec 2021).
-            </li>
-            <li class="">
+            </p>
+          </div>
+          <div class="d-flex mt-10" :style="$vuetify.breakpoint.lg ? 'max-width: 608px' : 'max-width: 808px'">
+            <Arrow class="mr-2" :width="$vuetify.breakpoint.lg ? '18px' : '24px'" :height="$vuetify.breakpoint.lg ? '18px' : '24px'" :class="$vuetify.breakpoint.lg ? 'mt-1' : 'mt-3'" />
+            <p class="tw-text-xl d-flex" :style="$vuetify.breakpoint.lg ? 'font-size: 14px; font-family: Mitr !important' : 'font-family: Mitr !important'">
               Furthermore, Covid-19 has had its impact on the gaming market as
               well, as millions of people experiencing lockdowns around the
               world started playing more games. A survey from March 2020
@@ -225,15 +232,16 @@
               time playing video games during the quarantine. My Farm believes
               that the Play-to-Earn model is opening a wide new window of
               solutions to ease the hardship brought on by the pandemic.
-            </li>
-          </ul>
-          <v-img
-            contain
-            src="/img/whitePaper/manRest.png"
-            width="413px"
-            height="351px"
-            style="left: 20%"
-          ></v-img>
+            </p>
+          </div>
+          <div class="d-flex" style="max-width: 808px">
+            <v-img
+              contain
+              src="/img/whitePaper/manRest.png"
+              :width="$vuetify.breakpoint.lg ? '213px' : '413px'"
+              :height="$vuetify.breakpoint.lg ? '250px' : '351px'"
+            ></v-img>
+          </div>
         </v-col>
       </v-row>
     </div>
@@ -263,42 +271,53 @@
         >
           <v-img
             src="/img/whitePaper/cardImg.png"
-            max-width="452px"
-            max-height="829px"
+            :max-width="$vuetify.breakpoint.lg ? '483px' : '583px'"
+            :max-height="$vuetify.breakpoint.lg ? '529px':'729px'"
             contain
           >
             <div class="d-flex justify-center ma-8">
               <v-img
                 class="text-center"
-                width="300px"
-                height="120px"
+                :max-width="$vuetify.breakpoint.lg ? '226px' : '326px'"
+                max-height="123px"
                 contain
                 src="/img/whitePaper/headerImg.png"
               >
                 <p
-                  class="
-                    tw-text-2xl
-                    white--text
-                    tw-font-normal
-                    d-flex
-                    justify-center
-                    ma-9
+                  :class="
+                  $vuetify.breakpoint.lg ? 'tw-text-base  white--text  tw-font-medium  d-flex  justify-center  ma-9' : 
+                    'tw-text-2xl  white--text  tw-font-medium  d-flex  justify-center  ma-9'
                   "
+                  style="font-family: SVN-SAF !important"
                 >
                   {{ valueProposition.header }}
                 </p>
               </v-img>
             </div>
-            <div class="ma-6">
-              <p>{{ valueProposition.text1 }}</p>
-              <p>{{ valueProposition.text2 }}</p>
+            <div :class="$vuetify.breakpoint.lg ? 'ml-16 mr-16' : 'ma-6'">
+              <p
+                :class="$vuetify.breakpoint.lg ? 'tw-text-base tw-font-medium' : 'tw-text-xl tw-font-medium'"
+                style="font-family: Mitr !important; max-width: 499px"
+              >
+                {{ valueProposition.text1 }}
+              </p>
+              <p
+                :class="$vuetify.breakpoint.lg ? 'd-flex tw-font-medium tw-text-base' : 'mt-10 tw-text-xl tw-font-medium'"
+                style="font-family: Mitr !important"
+              >
+                {{ valueProposition.text2 }}
+              </p>
             </div>
             <div class="d-flex justify-center">
               <v-img
+                :class="valueProposition.id === 2 ? 'mt-16' : ''"
                 :src="valueProposition.img"
-                :width="valueProposition.width"
-                :height="valueProposition.height"
+                :max-width="$vuetify.breakpoint.lg ? '160px' : valueProposition.width"
+                :max-height="valueProposition.id === 1 && $vuetify.breakpoint.lg ? '143px' : $vuetify.breakpoint.lg ? '252px' : valueProposition.height"
                 contain
+                style="
+                position: absolute;
+                bottom: 25px;"
               ></v-img>
             </div>
           </v-img>
@@ -308,7 +327,7 @@
     <!-- Value Proposition End  -->
 
     <!-- Envision My Farm Start  -->
-    <div class="backgroundImage tw-container tw-max-w-full tw-py-7">
+    <div class="backgroundImage tw-container tw-max-w-full">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -323,20 +342,25 @@
         </v-col>
       </v-row>
       <div class="d-flex flex-row tw-my-7">
-        <div class="col-6">
+        <div class="d-flex col-12 justify-center">
           <div class="d-flex">
-            <PlayButton class="tw-mx-2 hover-shd" />
-            <p class="tw-text-xl d-flex ma-2">
+            <Arrow class="mr-2" :width="$vuetify.breakpoint.lg ? '18px' : '24px'" :height="$vuetify.breakpoint.lg ? '18px' : '24px'" :class="$vuetify.breakpoint.lg ? 'mt-1' : 'mt-3'" />
+            <p
+              class="tw-text-xl d-flex"
+              :style="'font-family: Mitr !important' + $vuetify.breakpoint.lg ? 'max-width: 600px' : 'max-width: 809px'"
+
+            >
               In the near term, we encourage players to enjoy the open world of
               My Farm’s fresh sight and sound whether by themselves or with
               family and friends.
             </p>
           </div>
-        </div>
-        <div class="col-6">
           <div class="d-flex">
-            <PlayButton class="tw-mx-2 hover-shd" />
-            <p class="tw-text-xl d-flex ma-2">
+            <Arrow class="mr-2" :width="$vuetify.breakpoint.lg ? '18px' : '24px'" :height="$vuetify.breakpoint.lg ? '18px' : '24px'" :class="$vuetify.breakpoint.lg ? 'mt-1' : 'mt-3'" />
+            <p
+              class="tw-text-xl tw-font-medium"
+              :style="'font-family: Mitr !important' + $vuetify.breakpoint.lg ? 'max-width: 625px' : 'max-width: 740px'"
+            >
               The game is currently under development and we intend to involve
               the community even before the game launches (targeted Q1 2022) as
               we aim to be a community-governed game.
@@ -344,16 +368,18 @@
           </div>
         </div>
       </div>
-      <div class="d-flex justify-center flex-row container">
-        <div class="col">
-          <div class="gameUIimg">
-            <v-img
-              src="/img/whitePaper/hen.png"
-              max-width="294px"
-              max-height="478px"
-              contain
-              :class="!$vuetify.breakpoint.mobile ? 'left1057' : 'left73'"
-            ></v-img>
+      <div class="d-flex justify-center flex-row">
+        <div :class="$vuetify.breakpoint.lg || $vuetify.breakpoint.md ? '' : 'mr-16'">
+          <div :class="$vuetify.breakpoint.lg ? 'gameUIimg2': 'gameUIimg'">
+            <div>
+              <v-img
+                src="/img/whitePaper/hen.png"
+                :max-width="$vuetify.breakpoint.lg ? '293px' : '435px'"
+                max-height="478px"
+                contain
+                style="position: absolute; margin-left: 85%; margin-top: 15%"
+              ></v-img>
+            </div>
           </div>
         </div>
       </div>
@@ -375,11 +401,14 @@
           <PageNo data="5" />
         </v-col>
       </v-row>
-      <div class="d-flex flex-row tw-my-7">
-        <div class="col-6">
+      <div class="d-flex flex-row tw-my-7 container">
+        <div class="col-6 tw-my-16">
           <div class="d-flex">
-            <PlayButton class="tw-mx-2 hover-shd" />
-            <p class="tw-text-xl d-flex ma-2">
+            <Arrow width="24px" height="24px" />
+            <p
+              class="tw-text-xl tw-font-medium d-flex ma-2"
+              style="max-width: 680px; font-family: Mitr !important"
+            >
               In order to enhance entertainment, as well as increase income for
               player more effectively and easily. My Farm will provide minigames
               that are mainly built on the interaction between player inside the
@@ -392,7 +421,7 @@
             src="/img/whitePaper/cow.png"
             contain
             max-width="397px"
-            max-height="502px"
+            max-height="506px"
             class="ma-6"
           ></v-img>
         </div>
@@ -415,61 +444,68 @@
           <PageNo data="6" />
         </v-col>
       </v-row>
-      <div class="d-flex flex-row tw-my-7">
-        <div class="col-6">
-          <div class="d-flex">
-            <PlayButton class="tw-mx-2 hover-shd" style="width: 24px" />
-            <p class="tw-text-xl ma-3">
-              At My Farm, we aim to balance the two main pillars:
-            </p>
+      <!-- <div class="container"> -->
+        <div class="d-flex flex-row tw-my-7 container ml-16">
+          <div class="col">
+            <div class="d-flex">
+              <Arrow width="24px" height="24px" class="mt-4" />
+              <p class="tw-text-xl tw-font-semibold ma-3">
+                At My Farm, we aim to balance the two main pillars:
+              </p>
+            </div>
+            <li class="ml-16 tw-font-semibold">
+              Immersing players into a relax and zentitude playing environment
+            </li>
+            <li class="ml-16 tw-font-semibold">
+              Providing a revenue stream for every player
+            </li>
           </div>
-          <li class="ml-16">
-            Immersing players into a relax and zentitude playing environment
-          </li>
-          <li class="ml-16">Providing a revenue stream for every player</li>
         </div>
-      </div>
-      <div class="d-flex flex-row">
-        <div class="col-4">
-          <p
-            class="d-flex justify-center tw-font-normal white--text"
-            style="font-size: 40px; font-family: SVN-SAF !important"
-          >
-            Relax
-          </p>
-          <v-img
-            src="/img/whitePaper/relaxImg.png"
-            max-width="400px"
-            max-height="442px"
-            contain
-            class="d-flex justify-center"
-          ></v-img>
+        <div class="d-flex flex-row tw-my-16">
+            <div class="col-8 d-flex justify-space-around">
+            <div>
+              <p
+                class="d-flex justify-center tw-font-normal white--text"
+                style="font-size: 40px; font-family: SVN-SAF !important"
+              >
+                Relax
+              </p>
+              <v-img
+                src="/img/whitePaper/relaxImg.png"
+                :max-width="$vuetify.breakpoint.lg ? '337px' : '400px'"
+                max-height="442px"
+                contain
+                class="d-flex justify-center"
+              ></v-img>
+            </div>
+            <!-- </div> -->
+            <div class="mr-16">
+              <p
+                class="d-flex justify-center tw-font-normal white--text"
+                style="font-size: 40px; font-family: SVN-SAF !important"
+              >
+                Earn
+              </p>
+              <v-img
+                src="/img/whitePaper/earnImg.png"
+                :max-width="$vuetify.breakpoint.lg ? '337px' : '400px'"
+                max-height="442px"
+                contain
+                class="d-flex justify-center"
+              ></v-img>
+            </div>
+            </div>
+            <div class="col-4 d-flex">
+              <v-img
+                src="/img/whitePaper/henWithBox.png"
+                :max-width="$vuetify.breakpoint.lg ? '521px' : '600px'"
+                max-height="748px"
+                contain
+                class="d-flex justify-center"
+              ></v-img>
+            </div>
         </div>
-        <div class="col-4">
-          <p
-            class="d-flex justify-center tw-font-normal white--text"
-            style="font-size: 40px; font-family: SVN-SAF !important"
-          >
-            Earn
-          </p>
-          <v-img
-            src="/img/whitePaper/earnImg.png"
-            max-width="400px"
-            max-height="442px"
-            contain
-            class="d-flex justify-center"
-          ></v-img>
-        </div>
-        <div class="col-4 ma-6">
-          <v-img
-            src="/img/whitePaper/henWithBox.png"
-            max-width="600px"
-            max-height="748px"
-            contain
-            class="d-flex justify-center"
-          ></v-img>
-        </div>
-      </div>
+      <!-- </div> -->
     </div>
     <!-- Play - Relax - Earn End  -->
 
@@ -489,28 +525,39 @@
         </v-col>
       </v-row>
       <div class="d-flex flex-row container ma-16">
-        <div class="col-6">
-          <v-img
-            src="/img/whitePaper/treeAddvertise.png"
-            max-width="740px"
-            max-height="655px"
-            contain
-          ></v-img>
-        </div>
-        <div class="col-6">
-          <div class="d-flex" v-for="textList in textList" :key="textList.id">
-            <PlayButton class="tw-mx-2" style="width: 24px" />
-            <p class="tw-font-medium ma-4" align="start">
-              {{ textList.text }}
-            </p>
-          </div>
-          <div class="d-flex justify-center">
+        <div class="col-12 d-flex justify-center">
+          <div>
             <v-img
-              src="/img/whitePaper/fruitBasket.png"
-              max-width="271px"
-              max-height="222px"
+              src="/img/whitePaper/treeAddvertise.png"
+              :max-width="$vuetify.breakpoint.lg ? '519px' : '740px'"
+              max-height="655px"
               contain
             ></v-img>
+          </div>
+          <div class="ml-16">
+            <div class="d-flex" v-for="textList in textList" :key="textList.id">
+              <Arrow
+                width="24px"
+                height="24px"
+                class="mt-4"
+                style="font-family: Mitr !important"
+              />
+              <p
+                class="tw-font-medium tw-text-xl ma-4"
+                align="start"
+                style="max-width: 680px"
+              >
+                {{ textList.text }}
+              </p>
+            </div>
+            <div class="d-flex justify-center">
+              <v-img
+                src="/img/whitePaper/fruitBasket.png"
+                :max-width="$vuetify.breakpoint.lg ? '161px' : '271px'"
+                max-height="307px"
+                contain
+              ></v-img>
+            </div>
           </div>
         </div>
       </div>
@@ -575,7 +622,10 @@
     <!-- Earning With my Farm End -->
 
     <!-- MFT Token Allocation Start -->
-    <div class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7">
+    <div
+      class="IntroductiontoMyFarm tw-container tw-max-w-full tw-py-7"
+      style="overflow: hidden"
+    >
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -590,96 +640,118 @@
         </v-col>
       </v-row>
 
-      <div class="d-flex justify-center">
-        <v-img
-          src="/img/whitePaper/EmptyPaper.png"
-          width="1800px"
-          max-height="759px"
-          contain
-          position="absolute"
-        >
+      <div class="d-flex justify-center tw-my-16">
+        <div :class="$vuetify.breakpoint.lg ? 'EmptyPaper1' : 'EmptyPaper'" :style="$vuetify.breakpoint.lg ? 'margin-top: 118px' : '' ">
           <div class="d-flex flex-row justify-space-between">
-            <p class="ma-0 ma-12 tw-text-2xl fontFamily">
-              Total Supply:
-              <span class="fontFamily black--text">1,000,000,000 MFT</span>
-            </p>
-            <v-img
-              src="/img/whitePaper/MFTImg.png"
-              max-width="213px"
-              max-height="182px"
-              contain
-              style="margin-top: -2%"
-              class="mr-12"
-            ></v-img>
+            <div :class="$vuetify.breakpoint.lg ? 'col-6 mt-8' : 'ol-6 mt-16'">
+              <p :class="$vuetify.breakpoint.lg ? 'tw-text-lg fontFamily' : 'tw-text-2xl fontFamily'" style="margin-left: 10%">
+                Total Supply:
+                <span class="fontFamily black--text">1,000,000,000 MFT</span>
+              </p>
+            </div>
+            <div class="col-6 d-flex justify-end">
+              <v-img
+                src="/img/whitePaper/MFTImg.png"
+                :max-width="$vuetify.breakpoint.lg ? '156px' : '213px'"
+                max-height="182px"
+                contain
+                :style="$vuetify.breakpoint.lg ? 'margin-top: -15%' : 'margin-top: -9%'"
+                class="mr-12"
+              ></v-img>
+            </div>
           </div>
-          <div class="d-flex flex-row" style="margin-top: -35px">
+          <div :class="$vuetify.breakpoint.lg ? 'd-flex flex-row justify-space-around' : 'd-flex flex-row justify-space-around mt-10'">
             <div class="ml-4">
-              <div class="mt-4" v-for="list1 in list1" :key="list1.id">
-                <p class="ma-0 tw-text-xl ml-11 fontFamily">
+              <div
+                :class="list2.id != 0 && $vuetify.breakpoint.lg ? 'mt-6' : 'mt-10'"
+                v-for="list1 in list1"
+                :key="list1.id"
+              >
+                <p :class="$vuetify.breakpoint.lg ? 'tw-text-base tw-font-normal ml-11 fontFamily ma-0' : 'tw-font-normal ml-11 fontFamily ma-0 tw-text-xl'">
                   {{ list1.heading }}<br />
-                  <span class="black--text fontFamily">{{ list1.amount }}</span>
+                  <span class="black--text tw-font-normal fontFamily">{{
+                    list1.amount
+                  }}</span>
                 </p>
               </div>
             </div>
             <div class="ml-4">
-              <div class="mt-4" v-for="list2 in list2" :key="list2.id">
-                <p class="ma-0 tw-text-xl ml-11 fontFamily">
+              <div
+                :class="list2.id != 0 && $vuetify.breakpoint.lg ? 'mt-6' : 'mt-10'"
+                v-for="list2 in list2"
+                :key="list2.id"
+              >
+                <p :class="$vuetify.breakpoint.lg ? 'tw-text-base tw-font-normal fontFamily' : 'tw-text-xl tw-font-normal ml-11 fontFamily'">
                   {{ list2.heading }}<br />
-                  <span class="black--text fontFamily">{{ list2.amount }}</span>
+                  <span class="black--text tw-font-normal fontFamily">{{
+                    list2.amount
+                  }}</span>
                 </p>
               </div>
             </div>
-            <div class="ml-16 d-flex" style="margin-left: -80px">
-              <v-row>
-                <v-col cols="6" align-self="end">
-                  <v-img
-                    src="/img/whitePaper/cdImg.png"
-                    max-width="228px"
-                    max-height="228px"
-                    contain
-                  ></v-img>
-                </v-col>
-                <v-col cols="6">
+            <div class="ml-16 d-flex mr-16">
+              <div>
+                <v-img
+                  src="/img/whitePaper/cdImg.png"
+                  :max-width="$vuetify.breakpoint.lg ? '200px' : '328px'"
+                  max-height="328px"
+                  contain
+                  :style="$vuetify.breakpoint.lg ? 'margin-right: 12px; margin-top: 64px' : 'margin-right: 153px; margin-top: 64px'"
+                ></v-img>
+              </div>
+              <div>
+                <div
+                  v-for="colorList in colorList"
+                  :key="colorList.id"
+                  :class="colorList.id != 0 && $vuetify.breakpoint.lg ? 'd-flex mt-2' : 'd-flex mt-6'"
+                >
                   <div
-                    v-for="colorList in colorList"
-                    :key="colorList.id"
-                    class="d-flex mt-2"
+                    class="Circle"
+                    :style="'background-color:' + colorList.color"
+                  ></div>
+                  <p
+                    class="tw-text-base tw-font-medium ml-2 w-100"
+                    style="font-family: Mitr !important; color: #333333"
                   >
-                    <div class="Circle" style="background-color: #d14d37"></div>
-                    <p
-                      class="tw-text-base tw-font-medium ml-2 w-100"
-                      style="font-family: Mitr !important; color: #333333"
-                    >
-                      {{ colorList.title }}
-                    </p>
-                  </div>
-                </v-col>
-              </v-row>
+                    {{ colorList.title }}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="d-flex flex-row">
-            <p class="tw-font-xl ml-9" style="font-family: SVN-SAF !important">
-              ** MFT tokens will be burned 50% everytime players use to buy
-              in-game items, the remaining 50% will be returned to play to earn
-            </p>
-            <p
-              class="tw-font-xl"
-              style="font-family: SVN-SAF !important; color: #882900"
-            >
-              Initial Market Status <br />
-              <span class="black--text" style="font-family: SVN-SAF !important"
-                >Initial Circulating Supply: 1.000.000.000 $MFT
-              </span>
-            </p>
-            <v-img
-              src="/img/whitePaper/home.png"
-              max-width="391px"
-              max-height="395"
-              contain
-              style="top: -39px; left: 65px"
-            ></v-img>
-          </div>
-        </v-img>
+          <v-container>
+            <div class="d-flex flex-row">
+              <div class="col-12 d-flex justify-space-between">
+                <p
+                  :class="$vuetify.breakpoint.lg ? 'tw-font-xl' : 'tw-font-xl ml-16 mr-16'"
+                  :style="$vuetify.breakpoint.lg ? 'font-family: SVN-SAF !important; max-width: 757px; font-size: 14px' : 'font-family: SVN-SAF !important; max-width: 757px'"
+                >
+                  ** MFT tokens will be burned 50% everytime players use to buy
+                  in-game items, the remaining 50% will be returned to play to
+                  earn
+                </p>
+                <p
+                  class="tw-font-xl"
+                  :style="$vuetify.breakpoint.lg ?'font-size: 14px; font-family: SVN-SAF !important; color: #882900' : 'font-family: SVN-SAF !important; color: #882900'"
+                >
+                  Initial Market Status <br />
+                  <span
+                    class="black--text"
+                    :style="$vuetify.breakpoint.lg ? 'font-size: 14px; font-family: SVN-SAF !important' : 'font-family: SVN-SAF !important'"
+                    >Initial Circulating Supply: 1.000.000.000 $MFT
+                  </span>
+                </p>
+                <v-img
+                  src="/img/whitePaper/home.png"
+                  :max-width="$vuetify.breakpoint.lg ? '273px' : '391px'"
+                  max-height="395"
+                  contain
+                  :style="$vuetify.breakpoint.lg ? 'top: -109px; left: 105px' : 'top: -109px; left: 127px'"
+                ></v-img>
+              </div>
+            </div>
+          </v-container>
+        </div>
       </div>
     </div>
     <!-- MFT Token Allocation End -->
@@ -789,7 +861,7 @@
     <!-- Partner End  -->
 
     <!-- Connect  -->
-    <div class="header-main">
+    <div class="connect">
       <v-row class="tw-py-7">
         <v-col class="d-flex justify-center" cols="10">
           <v-img
@@ -803,32 +875,39 @@
           <PageNo data="12" />
         </v-col>
       </v-row>
-      <v-row class="d-flex justify-center">
-        <v-col align-self="center" align="center">
-          <v-img
-            v-if="!$vuetify.breakpoint.mobile"
-            class="tw-mx-auto tw-my-16"
-            contain
-            src="/img/LogoMyFarm.png"
-            max-width="702px"
-            max-height="429px"
-            height="392px"
-          ></v-img>
-          <p
-            class="tw-font-normal tw-text-4xl"
-            style="font-family: SVN-SAF !important"
-          >
-            For investment and partnership opportunities
-          </p>
-        </v-col>
-        <v-col align-self="center" align="cetner">
-          <v-img
+      <div class="d-flex justify-space-around">
+        <div>
+          <div class="d-flex flex-row justify-space-around tw-my-28">
+            <div>
+              <v-img
+                v-if="!$vuetify.breakpoint.mobile"
+                class="tw-mx-auto tw-my-16"
+                contain
+                src="/img/LogoMyFarm.png"
+                :max-width="$vuetify.breakpoint.lg ? '500px' : '702px'"
+                max-height="429px"
+                height="392px"
+              ></v-img>
+              <p
+                :class="$vuetify.breakpoint.lg ? 'tw-font-normal tw-text-xl' : 'tw-font-normal tw-text-4xl'"
+                style="font-family: SVN-SAF !important"
+              >
+                For investment and partnership opportunities
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div :class="$vuetify.breakpoint.lg ? 'paper1' : 'paper'">
+            <!-- <v-img
             src="/dashboard/paper.png"
             height="759px"
             width="781px"
             contain
           >
             <div style="margin-top: 112px; margin-left: 160px">
+          > -->
+            <div :style="$vuetify.breakpoint.lg ? 'margin-top: 185px; margin-left: 96px' : 'margin-top: 66px; margin-left: 160px'">
               <div
                 class="d-flex align-center"
                 v-for="item in socialIcons"
@@ -836,10 +915,10 @@
               >
                 <v-img
                   src="/img/whitePaper/iconBg.png"
-                  max-width="86px"
+                  :max-width="$vuetify.breakpoint.lg ? '60px' : '86px'"
                   max-height="77px"
                   contain
-                  class="mt-4"
+                  :class="$vuetify.breakpoint.lg ? 'mt-6' : 'mt-4'"
                 >
                   <v-img
                     :src="item.url"
@@ -856,28 +935,25 @@
               </div>
               <v-img
                 src="/img/whitePaper/petImg.png"
-                width="303px"
+                :width="$vuetify.breakpoint.lg ? '250px' : '303px'"
                 height="303px"
                 contain
                 position="relative"
-                style="left: 416px; margin-top: -178px"
+                :style="$vuetify.breakpoint.lg ? 'left: 392px; margin-top: -150px' : 'left: 416px; margin-top: -178px'"
               ></v-img>
             </div>
-          </v-img>
-        </v-col>
-      </v-row>
+          </div>
+        </div>
+      </div>
     </div>
   </v-container>
 </template>
 
 <script>
-import PlayButton from "@/assets/svg/playButton.svg";
 import RoadmapBlocks from "@/assets/svg/Roadmap-blocks.svg";
-
 
 export default {
   components: {
-    PlayButton,
     RoadmapBlocks,
   },
   data() {
@@ -890,8 +966,8 @@ export default {
           text2:
             "Unlike the majority of NFT games that only focus on Play-to-Earn model, MY FARM and players build together a relaxing atmosphere on and off the game to create a Play-and-Earn balance.",
           img: "/img/whitePaper/playGame.png",
-          width: "250px",
-          height: "190px",
+          width: "340px",
+          height: "252px",
         },
         {
           id: 1,
@@ -900,8 +976,8 @@ export default {
           text2:
             "Mobile games expected to clai,m 57 of the digital games market in 2021 (Statista). My Farm mobile friendly platform brings on board more of these traditional gamers.",
           img: "/img/whitePaper/mobile.png",
-          width: "150px",
-          height: "180px",
+          width: "187px",
+          height: "240px",
         },
         {
           id: 2,
@@ -909,8 +985,8 @@ export default {
           text1:
             "We will create VR mode, players can immerse more fully in 3D nature and wonders of Metaverse",
           img: "/img/whitePaper/experience.png",
-          width: "200px",
-          height: "200px",
+          width: "239px",
+          height: "240px",
         },
       ],
 
@@ -1268,13 +1344,6 @@ export default {
   // object-fit: cover;
 }
 
-// .partners-woodblock {
-//   background-image: url("../../static/img/whitePaper/game.png");
-//   max-width: 700px;
-//   height: 715px;
-//   // position: absolute;
-//   background-size: 100%;
-// }
 // Introductoin to MyFarm CSS End
 
 // LandScape of Opportunity Start
@@ -1289,8 +1358,8 @@ export default {
 }
 
 .cricle1 {
-  width: 120px;
-  height: 120px;
+  width: 206px;
+  height: 206px;
   border-radius: 50%;
   background: #882900;
   display: flex;
@@ -1299,8 +1368,8 @@ export default {
 }
 
 .cricle2 {
-  width: 80px;
-  height: 80px;
+  width: 124px;
+  height: 124px;
   border-radius: 50%;
   background: #882900;
   display: flex;
@@ -1308,14 +1377,46 @@ export default {
   justify-content: center;
 }
 .cricle3 {
-  width: 60px;
-  height: 60px;
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
   background: #882900;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+// Resolution 1264px > < 1904px
+.Cricle1 {
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
+  background: #882900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Cricle2 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #882900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Cricle3 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #882900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// Resolution 1264px > < 1904px 
+
 // LandScape of Opportunity End
 
 // Value Proposition Start
@@ -1331,12 +1432,27 @@ export default {
 // Envision start
 .gameUIimg {
   background-image: url("../../static/img/whitePaper/gameLargepic.png");
-  max-width: 1732px;
+  width: 1732px;
   height: 739px;
   background-size: 100%;
   background-position: cover;
   margin-bottom: 0px;
+  position: relative;
+  bottom: -13px;
 }
+// Resolution 1264px > < 1904px
+.gameUIimg2 {
+  background-image: url("../../static/img/whitePaper/gameLargepic.png");
+  width: 1232px;
+  height: 739px;
+  background-size: 100%;
+  background-position: cover;
+  margin-bottom: 0px;
+  position: relative;
+  bottom: -214px;  
+}
+// Resolution 1264px > < 1904px
+
 .left42 {
   // position: absolute;
   left: 42px;
@@ -1356,13 +1472,24 @@ export default {
 // Envision End
 
 // MFT Token Allocation Start
-// .paper {
-//   background-image: url("../../static/img/whitePaper/EmptyPaper.png");
-//   background-size: 100%;
-//   height: 759px;
-//   width: 1800px;
-//   margin-top: 80px;
-// }
+.EmptyPaper {
+  background-image: url("../../static/img/whitePaper/EmptyPaper.png");
+  width: 1800px;
+  height: 732px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Resolution 1264px > < 1904px*
+.EmptyPaper1 {
+  background-image: url("../../static/img/whitePaper/EmptyPaper.png");
+  width: 1200px;
+  height: 732px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+// Resolution 1264px > < 1904px*
+
 .Circle {
   width: 28px;
   height: 28px;
@@ -1375,6 +1502,10 @@ export default {
   height: auto;
   width: 100%;
   // object-fit: cover;
+}
+.fontFamily {
+  font-family: SVN-SAF !important;
+  color: #882900;
 }
 // MFT Token Allocation End
 
@@ -1395,12 +1526,27 @@ export default {
 // Partners End
 
 // Connect Start
+.connect {
+  background-image: url("../../static/img/whitePaper/connectImg.png");
+  background-position: 100%;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
 .paper {
   background-image: url("../../static/dashboard/paper.png");
-  background-position: 100%;
+  background-position: cover;
   background-size: 100%;
   height: 759px;
   width: 781px;
-  margin-top: 10px;
+}
+// Resolution 
+.paper1 {
+  background-image: url("../../static/dashboard/paper.png");
+  background-position: cover;
+  background-size: 100%;
+  height: 759px;
+  width: 681px;
 }
 </style>
