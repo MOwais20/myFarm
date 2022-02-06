@@ -58,11 +58,11 @@
           d-flex
           flex-row
           align-center
-          mx-auto
           d-flex
           justify-center
           tw-my-16 tw-static
         "
+        style="overflow: hidden"
       >
         <v-img
           :style="$vuetify.breakpoint.lg ? '' : 'left: 7rem'"
@@ -72,7 +72,7 @@
           :height="$vuetify.breakpoint.lg ? '515px' : '715px'"
           contain
           lazy-src="/img/whitePaper/game.png"
-          class="d-flex align-center justify-end mx-auto tw-relative"
+          class="d-flex align-center justify-end tw-relative"
         >
           <div
             style="max-width: 535px; height: 100%"
@@ -116,7 +116,25 @@
           </div>
         </v-img>
 
-        <div class="d-flex align-end tw-relative" :style="$vuetify.breakpoint.lg ? 'right: 6rem': 'right: 5rem'">
+        <div class="d-flex">
+          <v-img
+            contain
+            src="/img/whitePaper/GameUi.png"
+            :max-width="$vuetify.breakpoint.lg ? '670px' : '1010px'"
+            max-height="552px"
+            :style="$vuetify.breakpoint.lg ? 'right: 12%; margin-top: 30px' : 'right: 9%; margin-top: 30px'"
+          >
+          </v-img>
+          <v-img
+            contain
+            src="/img/tractor.png"
+            :height="$vuetify.breakpoint.lg ? '250px' : '332px'"
+            :max-width="$vuetify.breakpoint.lg ? '250px' : '331px'"
+            lazy-src="/img/tractor.png"
+            :style="$vuetify.breakpoint.lg ? 'position: absolute; margin-left: 30%; margin-top: 12%' : 'position: absolute; margin-left: 30%; margin-top: 11%'"
+          ></v-img>
+        </div>
+        <!-- <div class="d-flex align-end tw-relative" :style="$vuetify.breakpoint.lg ? 'right: 6rem': 'right: 5rem'">
           <v-img
             contain
             src="/img/whitePaper/GameUi.png"
@@ -134,7 +152,7 @@
               lazy-src="/img/tractor.png"
             ></v-img>
           </v-img>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- Introduction to My Farm End -->
